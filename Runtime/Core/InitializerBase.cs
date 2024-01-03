@@ -106,6 +106,11 @@ namespace ME.ECS {
 
             public bool Contains(DefineInfo info) {
 
+                if (defines == null)
+                {
+                    return false;
+                }
+
                 foreach (var item in this.defines) {
                     if (item.name == info.define) {
                         return true;
